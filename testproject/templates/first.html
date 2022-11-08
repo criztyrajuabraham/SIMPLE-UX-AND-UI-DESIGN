@@ -1,0 +1,182 @@
+{% load static %}
+
+
+<html>
+<head>
+
+
+<div class="container"></div>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<div class="navbar">
+  {% if user.is_authenticated %}
+
+  <a class="user">Hello {{user.username}}</a>
+  <a href="{% url 'logout' %}">Logout</a>
+  <a href="{% url 'enquiry' %}">More</a>
+
+  {% else %}
+
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'register' %}">Register</a>
+
+  {% endif %}
+
+  <div class="dropdown">
+    <button class="dropbtn">Department
+      <i class="fa fa-caret-down"></i>
+    </button>
+
+    <div class="dropdown-content">
+      <a href="https://en.wikipedia.org/wiki/Mechanical_engineering">Mechanichel</a>
+      <a href="https://en.wikipedia.org/wiki/Automotive_engineering">automobile</a>
+      <a href="https://en.wikipedia.org/wiki/Computer_science_and_engineering">computer science</a>
+      <a href="https://en.wikipedia.org/wiki/Electronic_engineering">electronics</a>
+      <a href="https://en.wikipedia.org/wiki/Electrical_engineering">electrical</a>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<body>
+
+  <div class="element"></div>
+
+<div class="btn-2">
+  <a href="{% url 'login' %}">
+    <button class="login-1" type="button">Login</button></a>
+</div>
+
+
+</body>
+
+<style>
+
+  
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #34495e;
+}
+
+  
+  .navbar {
+  padding:20px;
+  border: inset;
+  font-size: 40px;
+  overflow: hidden;
+  background-color: #E16666 ;
+  }
+
+  .container {
+    color: rgb(83, 83, 83);
+  
+  }
+  
+  .navbar a {
+  float: left;
+  font-size: 19px;
+  color: #F0E0EB;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+  
+  .dropdown {
+  float: left;
+  overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+  font-size: 19px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  }
+  
+  
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #D0ECE7;
+  min-width: 160px;
+  box-shadow:  3px 4px  black ;
+  z-index: 1;
+  }
+  
+  .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+  background-color: #F4F6F6 ;
+  }
+  
+  .dropdown:hover .dropdown-content {
+  display: block;
+  }
+  
+  .element {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    background-color: red;
+    animation-name: stretch;
+    animation-duration: 1.5s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+  }
+  
+  @keyframes stretch {
+    0% {
+      transform: scale(.1);
+      background-color: red;
+      border-radius: 90%;
+    }
+    40% {
+      background-color: orange;
+    }
+    90% {
+      transform: scale(.5);
+      background-color: yellow;
+    }
+  }
+
+  
+.login-1 {
+
+  position:absolute;
+  bottom:39%;
+  right:45%;
+  width: 10%;
+  padding: 7px;
+  font-size:17px;
+  border-radius: 15px;
+  background:#D1E6B7;
+
+
+
+
+
+</style>
+</html>

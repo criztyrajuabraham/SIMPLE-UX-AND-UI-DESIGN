@@ -1,0 +1,87 @@
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+font-family: system-ui, sans-serif;
+font-size: 19px;
+font-weight: bold;
+background: #909da8;
+color: #384047;
+}
+
+form {
+max-width: 350px;
+margin: 10px auto;
+padding: 10px 20px;
+background: #f4f7f8;
+border-radius: 8px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+background: rgba(255,255,255,0.1);
+border: none;
+font-size: 16px;
+height: auto;
+margin: 2;
+outline: 1;
+padding: 15px;
+width: 100%;
+background-color: #EAECEE;
+color: #8a97a0;
+box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+margin-bottom: 20px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+margin: 2px 1px 2px 2px;
+}
+
+select {
+padding: 6px;
+height: 32px;
+border-radius: 2px;
+}
+
+button {
+padding: 17px 38px 17px 38px;
+color: #FFF;
+background-color: #4bc970;
+font-size: 18px;
+text-align: center;
+font-style: serif;
+border-radius: 7px;
+width: 100%;
+border: 1px solid #3ac162;
+border-width: 1px 1px 3px;
+box-shadow: 1 -1px 0 rgba(250,235,255,0.1) inset;
+margin-bottom: 10px;
+}
+
+.radio {
+font-family: system-ui, sans-serif;
+font-size: 19px;
+font-weight: bold;
+line-height: 1.1;
+
+}
+
+
+@media screen and (min-width: 400px) {
+
+form {
+max-width: 500px;
+}
+
+}

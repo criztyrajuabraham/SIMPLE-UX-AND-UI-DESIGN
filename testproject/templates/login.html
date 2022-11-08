@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+
+
+<div class="login-form">
+    <form method="POST" action="login">{% csrf_token %}
+
+      <h1>Login</h1>
+      
+        <div class="input-field">
+
+          <input type="Text" name="username" placeholder="Username" required/>
+          <input type="password" name="password" placeholder="Password" required/>
+          <div class="btn">
+            <button class="box-1" type="submit">Login</button
+          </div>
+            <a href="{% url 'register' %}"><button class="btn-1" type="button">Register</button></a>
+
+
+      </div> 
+    </form>
+  </div>
+  
+</body>
+<style>
+
+
+  @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+
+* {
+  margin: 5px;
+  padding: 3px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+body {
+  background: #cbaeb1;
+  font-family: 'Rubik', sans-serif;
+}
+
+.login-form {
+  background: #FCFCF8 ;
+  width: 480px;
+  margin: 125px auto;
+  display: -webkit-box;
+  display: flex-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 2px 3px 20px 1px #5A5A5A  ;
+}
+.login-form h1 {
+  padding: 35px 35px 0 35px;
+  font-weight: 300;
+}
+
+.login-form .input-field {
+  padding: 12px 12px;
+}
+
+
+.login-form .input-field input {
+  font-size: 16px;
+  background: #f8f7f9;
+  display: inline-block;
+  display: -webkit-box;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 5px;
+  border: 1;
+  border-radius: 7px;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.box-1 { 
+
+  position:absolute;
+  bottom:39%;
+  right:39%;
+  width: 10%;
+  padding: 10px;
+  font-size:17px;
+  border-radius: 15px;
+  background-color:#D5F4E9 ; 
+
+}
+
+.btn-1 {
+
+  position:absolute;
+  bottom:39%;
+  right:51%;
+  width: 10%;
+  padding: 10px;
+  font-size:17px;
+  border-radius: 15px;
+  background:#A6CCD8;
+
+  }
+
+
+
+
+</style>
+</html>
+

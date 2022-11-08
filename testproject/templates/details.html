@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: #6C72AF;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 30%;
+	left: 5%;
+}
+
+table {
+	width: 1250px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 5px 2px 5px #434141;
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: #3A848F;
+	color: #fff;
+}
+
+ .btn {
+   background-color: #4CAF90;
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+   border-radius:15px;
+
+}
+
+
+.wrapper {
+    text-align: center;
+    bottom:25%;
+    }
+
+.heading {
+
+text-align:center;
+}
+
+
+</style>
+</head>
+<body>
+
+{% block content %}
+
+<div class="heading">
+	<h2>Data submitted</h2>
+</div>
+
+
+
+{% for i in form %}
+
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th> Birth Date</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>Phone</th>
+				<th>E-Mail</th>
+				<th>Comments</th>
+				<th>Department</th>
+				<th>Course</th>
+				<th>Enquiry</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>{{i.username}}</th>
+				<th>{{i.dateofbirth}}</th>
+				<th>{{i.age}}</th>
+				<th>{{i.gender}}</th>
+				<th>{{i.phone}}</th>
+				<th>{{i.mail}}</th>
+				<th>{{i.comments}}</th>
+				<th>{{i.parent_selection}}</th>
+				<th>{{i.child_selection}}</th>
+				<th>{{i.user_interest}}</th>
+
+			</tr>
+		</tbody>
+	</table>
+
+
+	<br>
+	<div class="wrapper">
+		<a href="{% url 'enquiry' %}"><button class="btn" type="submit">OK</button></a>
+	</div>
+
+
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
+</body>
+</html>
+
